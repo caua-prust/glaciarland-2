@@ -4,235 +4,209 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>❄️ GlaciarLand | Reino das Geleiras</title>
+  <meta name="description" content="GlaciarLand é um parque temático de gelo com atrações incríveis, paisagens congelantes e aventuras inesquecíveis para toda a família.">
 
-  <!-- Tailwind CSS CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-
-  <!-- Fonte -->
+  <!-- Fonte Google -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
-    rel="stylesheet"
-  >
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-  <style>
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-family: 'Inter', sans-serif;
-      margin: 0;
-      color: white;
-      background:
-        radial-gradient(circle at top left, rgba(34, 211, 238, 0.12), transparent 35%),
-        radial-gradient(circle at bottom right, rgba(168, 85, 247, 0.10), transparent 35%),
-        linear-gradient(135deg, #020617 0%, #0f172a 45%, #082f49 100%);
-      overflow-x: hidden;
-    }
-
-    /* Barra de rolagem */
-    ::-webkit-scrollbar {
-      width: 10px;
-    }
-
-    ::-webkit-scrollbar-thumb {
-      background: linear-gradient(#22d3ee, #3b82f6, #8b5cf6);
-      border-radius: 999px;
-    }
-
-    /* Efeito vidro */
-    .glass {
-      background: rgba(15, 23, 42, 0.55);
-      backdrop-filter: blur(14px);
-      -webkit-backdrop-filter: blur(14px);
-      border: 1px solid rgba(255, 255, 255, 0.08);
-    }
-  </style>
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-  <!-- HEADER -->
-  <header class="fixed top-0 left-0 w-full z-50 glass shadow-2xl">
-    <nav class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-      <h1 class="text-3xl font-black bg-gradient-to-r from-cyan-300 via-blue-400 to-purple-400 bg-clip-text text-transparent">
-        ❄️ GlaciarLand
-      </h1>
+  <!-- Cabeçalho -->
+  <header class="header">
+    <div class="container nav">
+      <a href="#inicio" class="logo">❄ GlaciarLand</a>
 
-      <div class="hidden md:flex gap-8 font-semibold text-sm text-cyan-100">
-        <a href="#inicio" class="hover:text-cyan-300 transition">Início</a>
-        <a href="#sobre" class="hover:text-cyan-300 transition">Sobre</a>
-        <a href="#atracoes" class="hover:text-cyan-300 transition">Atrações</a>
-        <a href="#galeria" class="hover:text-cyan-300 transition">Galeria</a>
-        <a href="#contato" class="hover:text-cyan-300 transition">Contato</a>
-      </div>
-
-      <a
-        href="#atracoes"
-        class="px-6 py-3 rounded-full bg-gradient-to-r from-cyan-300 via-blue-500 to-purple-500 text-slate-950 font-bold shadow-xl hover:scale-105 transition"
-      >
-        Explorar
-      </a>
-    </nav>
+      <nav>
+        <ul class="menu">
+          <li><a href="#inicio">Início</a></li>
+          <li><a href="#atracoes">Atrações</a></li>
+          <li><a href="#galeria">Galeria</a></li>
+          <li><a href="#ingressos">Ingressos</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <!-- HERO -->
-  <section
-    id="inicio"
-    class="min-h-screen flex items-center pt-24 px-6 bg-cover bg-center"
-    style="background-image:
-      linear-gradient(rgba(2,6,23,0.75), rgba(2,6,23,0.9)),
-      url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=2000&q=100');"
-  >
-    <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
-      <!-- Texto -->
+  <!-- Hero -->
+  <section class="hero" id="inicio">
+    <div class="overlay"></div>
+    <div class="container hero-content">
+      <span class="tag">❄ O Reino das Geleiras</span>
+      <h1>Bem-vindo ao <span>GlaciarLand</span></h1>
+      <p>
+        Um parque mágico onde neve, gelo e aventura se encontram.
+        Descubra castelos congelados, escorregadores de gelo e experiências inesquecíveis.
+      </p>
+
+      <div class="hero-buttons">
+        <a href="#ingressos" class="btn btn-primary">Comprar Ingressos</a>
+        <a href="#atracoes" class="btn btn-secondary">Explorar</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sobre -->
+  <section class="about section">
+    <div class="container about-grid">
       <div>
-        <span class="inline-block px-4 py-2 rounded-full bg-cyan-400/10 border border-cyan-300/20 text-cyan-200 text-sm mb-6">
-          🌍 Destino Oficial das Geleiras Eternas
-        </span>
-
-        <h2 class="text-5xl md:text-7xl font-black leading-tight mb-6">
-          Bem-vindo à
-          <span class="bg-gradient-to-r from-cyan-300 via-blue-400 to-purple-400 bg-clip-text text-transparent">
-            GlaciarLand
-          </span>
-        </h2>
-
-        <p class="text-lg md:text-xl text-slate-200 leading-relaxed mb-10 max-w-2xl">
-          Um território extraordinário onde montanhas de gelo, auroras boreais e
-          paisagens cristalinas criam uma experiência inesquecível para visitantes
-          do mundo inteiro.
+        <p class="section-label">Sobre o Parque</p>
+        <h2>Uma experiência congelante e inesquecível</h2>
+        <p>
+          GlaciarLand foi criado para transportar visitantes para um mundo de cristais,
+          neve e magia. Com atrações para todas as idades, o parque oferece diversão,
+          aventura e cenários impressionantes.
         </p>
-
-        <div class="flex flex-wrap gap-4">
-          <a
-            href="#atracoes"
-            class="px-8 py-4 rounded-2xl bg-gradient-to-r from-cyan-300 via-blue-500 to-purple-500 text-slate-950 font-black shadow-2xl hover:scale-105 transition"
-          >
-            🚀 Iniciar Jornada
-          </a>
-
-          <a
-            href="#sobre"
-            class="px-8 py-4 rounded-2xl border border-cyan-300/30 bg-white/10 backdrop-blur-md font-semibold hover:bg-white/20 transition"
-          >
-            📘 Saiba Mais
-          </a>
-        </div>
-
-        <!-- Estatísticas -->
-        <div class="grid grid-cols-3 gap-6 mt-12 max-w-xl">
-          <div>
-            <h4 class="text-3xl font-black text-cyan-300">150+</h4>
-            <p class="text-sm text-slate-300">Geleiras</p>
-          </div>
-          <div>
-            <h4 class="text-3xl font-black text-blue-300">4K</h4>
-            <p class="text-sm text-slate-300">Fotos HD</p>
-          </div>
-          <div>
-            <h4 class="text-3xl font-black text-purple-300">∞</h4>
-            <p class="text-sm text-slate-300">Aventura</p>
-          </div>
-        </div>
       </div>
 
-      <!-- Imagem -->
-      <div class="relative">
-        <div class="absolute -inset-8 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 rounded-[2.5rem] blur-3xl opacity-30"></div>
-
-        <div class="relative rounded-[2.5rem] border border-white/10 bg-white/5 backdrop-blur-2xl p-4 shadow-2xl">
-          <img
-            src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1200&q=100"
-            alt="Paisagem Glacial"
-            class="w-full h-[460px] object-cover rounded-3xl"
-          />
+      <div class="stats">
+        <div class="stat-card">
+          <h3>25+</h3>
+          <p>Atrações Temáticas</p>
+        </div>
+        <div class="stat-card">
+          <h3>100%</h3>
+          <p>Experiência Imersiva</p>
+        </div>
+        <div class="stat-card">
+          <h3>365</h3>
+          <p>Dias de Magia</p>
+        </div>
+        <div class="stat-card">
+          <h3>-8°C</h3>
+          <p>Temperatura Real</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- SOBRE -->
-  <section id="sobre" class="py-28 px-6">
-    <div class="max-w-7xl mx-auto text-center">
-      <h3 class="text-4xl md:text-5xl font-black mb-6">Sobre GlaciarLand</h3>
-      <p class="text-slate-200 text-lg max-w-4xl mx-auto leading-relaxed">
-        GlaciarLand é um destino fictício de beleza incomparável, conhecido por
-        suas geleiras monumentais, trilhas congeladas, observação de auroras
-        boreais e experiências tecnológicas imersivas.
-      </p>
-    </div>
-  </section>
+  <!-- Atrações -->
+  <section class="section attractions" id="atracoes">
+    <div class="container">
+      <p class="section-label">Diversão</p>
+      <h2>Principais Atrações</h2>
 
-  <!-- ATRAÇÕES -->
-  <section id="atracoes" class="py-24 px-6">
-    <div class="max-w-7xl mx-auto">
-      <h3 class="text-4xl md:text-5xl font-black text-center mb-16">
-        Principais Atrações
-      </h3>
+      <div class="cards">
+        <article class="card">
+          <div class="icon">🏰</div>
+          <h3>Castelo de Gelo</h3>
+          <p>Explore um majestoso castelo construído com esculturas cristalinas.</p>
+        </article>
 
-      <div class="grid md:grid-cols-3 gap-8">
-        <div class="glass rounded-3xl p-8 hover:scale-105 transition">
-          <div class="text-5xl mb-5">❄️</div>
-          <h4 class="text-2xl font-bold mb-3">Vale das Geleiras</h4>
-          <p class="text-slate-200">
-            Trilhas entre montanhas cobertas de neve e formações de gelo milenares.
-          </p>
-        </div>
+        <article class="card">
+          <div class="icon">🛷</div>
+          <h3>Escorregador Congelante</h3>
+          <p>Desça em alta velocidade por pistas feitas de gelo real.</p>
+        </article>
 
-        <div class="glass rounded-3xl p-8 hover:scale-105 transition">
-          <div class="text-5xl mb-5">🌌</div>
-          <h4 class="text-2xl font-bold mb-3">Aurora Boreal</h4>
-          <p class="text-slate-200">
-            Céus iluminados por cores vibrantes durante as noites polares.
-          </p>
-        </div>
+        <article class="card">
+          <div class="icon">🐧</div>
+          <h3>Vila dos Pinguins</h3>
+          <p>Conheça os adoráveis habitantes do mundo gelado.</p>
+        </article>
 
-        <div class="glass rounded-3xl p-8 hover:scale-105 transition">
-          <div class="text-5xl mb-5">🧭</div>
-          <h4 class="text-2xl font-bold mb-3">Expedições Árticas</h4>
-          <p class="text-slate-200">
-            Aventuras guiadas com equipamentos de última geração.
-          </p>
-        </div>
+        <article class="card">
+          <div class="icon">✨</div>
+          <h3>Aurora Show</h3>
+          <p>Espetáculo noturno com luzes, música e efeitos especiais.</p>
+        </article>
       </div>
     </div>
   </section>
 
-  <!-- GALERIA -->
-  <section id="galeria" class="py-24 px-6">
-    <div class="max-w-7xl mx-auto">
-      <h3 class="text-4xl md:text-5xl font-black text-center mb-16">Galeria</h3>
+  <!-- Galeria -->
+  <section class="section gallery" id="galeria">
+    <div class="container">
+      <p class="section-label">Galeria</p>
+      <h2>Um mundo de cristais e neve</h2>
 
-      <div class="grid md:grid-cols-3 gap-6">
-        <img src="https://images.unsplash.com/photo-1517821365201-7734f463f9c4?auto=format&fit=crop&w=900&q=90" class="rounded-3xl h-72 w-full object-cover hover:scale-105 transition">
-        <img src="https://images.unsplash.com/photo-1473448912268-2022ce9509d8?auto=format&fit=crop&w=900&q=90" class="rounded-3xl h-72 w-full object-cover hover:scale-105 transition">
-        <img src="https://images.unsplash.com/photo-1482192596544-9eb780fc7f66?auto=format&fit=crop&w=900&q=90" class="rounded-3xl h-72 w-full object-cover hover:scale-105 transition">
+      <div class="gallery-grid">
+        <div class="gallery-item tall"></div>
+        <div class="gallery-item"></div>
+        <div class="gallery-item"></div>
+        <div class="gallery-item wide"></div>
       </div>
     </div>
   </section>
 
-  <!-- CONTATO -->
-  <section id="contato" class="py-24 px-6">
-    <div class="max-w-4xl mx-auto glass rounded-[2.5rem] p-12 text-center">
-      <h3 class="text-4xl font-black mb-6">Planeje sua visita</h3>
-      <p class="text-slate-200 text-lg mb-8">
-        Descubra o destino mais fascinante do mundo congelado.
-      </p>
-      <a
-        href="mailto:contato@glaciarland.com"
-        class="px-10 py-5 rounded-2xl bg-gradient-to-r from-cyan-300 via-blue-500 to-purple-500 text-slate-950 font-black text-lg shadow-2xl hover:scale-105 transition"
-      >
-        ✉️ Entrar em Contato
-      </a>
+  <!-- Ingressos -->
+  <section class="section tickets" id="ingressos">
+    <div class="container">
+      <p class="section-label">Ingressos</p>
+      <h2>Escolha sua aventura</h2>
+
+      <div class="cards pricing">
+        <article class="price-card">
+          <h3>Passaporte Gelado</h3>
+          <div class="price">R$ 89</div>
+          <ul>
+            <li>Acesso ao parque</li>
+            <li>3 atrações inclusas</li>
+            <li>Fotos digitais</li>
+          </ul>
+          <a href="#" class="btn btn-primary">Comprar</a>
+        </article>
+
+        <article class="price-card featured">
+          <span class="badge">Mais Popular</span>
+          <h3>Expedição Premium</h3>
+          <div class="price">R$ 149</div>
+          <ul>
+            <li>Acesso ilimitado</li>
+            <li>Show Aurora VIP</li>
+            <li>Brinde exclusivo</li>
+          </ul>
+          <a href="#" class="btn btn-primary">Comprar</a>
+        </article>
+
+        <article class="price-card">
+          <h3>Família Polar</h3>
+          <div class="price">R$ 349</div>
+          <ul>
+            <li>4 pessoas</li>
+            <li>Desconto especial</li>
+            <li>Área reservada</li>
+          </ul>
+          <a href="#" class="btn btn-primary">Comprar</a>
+        </article>
+      </div>
     </div>
   </section>
 
-  <!-- FOOTER -->
-  <footer class="py-10 text-center border-t border-white/10 text-slate-400 bg-slate-950/40">
-    <p>© 2026 GlaciarLand — O Reino das Geleiras Eternas.</p>
+  <!-- Contato -->
+  <section class="section contact" id="contato">
+    <div class="container contact-grid">
+      <div>
+        <p class="section-label">Contato</p>
+        <h2>Planeje sua visita</h2>
+        <p>
+          📍 Avenida das Geleiras, 1000<br>
+          🕒 Todos os dias, das 10h às 22h<br>
+          📞 (11) 4000-2026<br>
+          ✉ contato@glaciarland.com
+        </p>
+      </div>
+
+      <form class="contact-form">
+        <input type="text" placeholder="Seu nome" required>
+        <input type="email" placeholder="Seu e-mail" required>
+        <textarea rows="5" placeholder="Sua mensagem"></textarea>
+        <button type="submit" class="btn btn-primary">Enviar Mensagem</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Rodapé -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <p>© 2026 GlaciarLand — Todos os direitos reservados.</p>
+      <p>❄ Onde a magia do gelo ganha vida.</p>
+    </div>
   </footer>
 
 </body>
