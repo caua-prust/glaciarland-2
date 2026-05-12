@@ -1,70 +1,151 @@
-<div class="min-h-screen bg-gradient-to-br from-slate-950 via-blue-950 to-cyan-900 text-white">
+<div
+  class="min-h-screen text-white bg-cover bg-center bg-fixed relative overflow-hidden"
+  style="
+    background-image:
+      linear-gradient(rgba(2, 6, 23, 0.82), rgba(3, 7, 18, 0.92)),
+      url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=2000&q=100');
+  "
+>
+  <!-- Efeitos decorativos no fundo -->
+  <div class="absolute inset-0 pointer-events-none">
+    <div
+      class="absolute top-0 left-0 w-[600px] h-[600px] bg-cyan-400/20 rounded-full blur-3xl"
+    ></div>
+    <div
+      class="absolute bottom-0 right-0 w-[700px] h-[700px] bg-purple-500/20 rounded-full blur-3xl"
+    ></div>
+    <div
+      class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-blue-500/10 rounded-full blur-3xl"
+    ></div>
+  </div>
+
   <!-- Header -->
-  <header class="fixed top-0 left-0 w-full z-50 backdrop-blur-md bg-slate-950/70 border-b border-cyan-400/10">
-    <nav class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-      <h1 class="text-2xl font-bold bg-gradient-to-r from-cyan-300 via-blue-400 to-purple-400 bg-clip-text text-transparent">
+  <header
+    class="fixed top-0 left-0 w-full z-50 backdrop-blur-2xl bg-slate-950/65 border-b border-cyan-300/10 shadow-2xl shadow-cyan-900/20"
+  >
+    <nav
+      class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between"
+    >
+      <!-- Logo -->
+      <h1
+        class="text-3xl md:text-4xl font-black tracking-tight bg-gradient-to-r from-cyan-300 via-sky-400 to-purple-400 bg-clip-text text-transparent drop-shadow-lg"
+      >
         ❄️ GlaciarLand
       </h1>
 
-      <div class="hidden md:flex items-center gap-8 text-sm font-medium text-cyan-100/90">
-        <a href="#inicio" class="hover:text-cyan-300 transition">Início</a>
-        <a href="#sobre" class="hover:text-cyan-300 transition">Sobre</a>
-        <a href="#explorar" class="hover:text-cyan-300 transition">Explorar</a>
-        <a href="#contato" class="hover:text-cyan-300 transition">Contato</a>
+      <!-- Menu -->
+      <div
+        class="hidden md:flex items-center gap-8 text-sm font-semibold text-cyan-100/90"
+      >
+        <a href="#inicio" class="hover:text-cyan-300 transition duration-300"
+          >Início</a
+        >
+        <a href="#sobre" class="hover:text-cyan-300 transition duration-300"
+          >Sobre</a
+        >
+        <a href="#explorar" class="hover:text-cyan-300 transition duration-300"
+          >Explorar</a
+        >
+        <a href="#contato" class="hover:text-cyan-300 transition duration-300"
+          >Contato</a
+        >
       </div>
 
-      <button class="px-5 py-2 rounded-full bg-gradient-to-r from-cyan-400 to-blue-500 text-slate-950 font-semibold shadow-lg shadow-cyan-500/30 hover:scale-105 transition">
+      <!-- Botão -->
+      <button
+        class="px-6 py-3 rounded-full bg-gradient-to-r from-cyan-300 via-blue-500 to-purple-500 text-slate-950 font-extrabold shadow-2xl shadow-cyan-400/40 hover:scale-110 hover:-translate-y-1 hover:shadow-cyan-300/70 transition duration-300"
+      >
         Explorar Agora
       </button>
     </nav>
   </header>
 
   <!-- Hero -->
-  <section id="inicio" class="pt-36 pb-24 px-6">
-    <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
+  <section id="inicio" class="relative z-10 pt-40 pb-28 px-6">
+    <div
+      class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center"
+    >
       <!-- Texto -->
       <div>
-        <span class="inline-block px-4 py-1 rounded-full bg-cyan-400/10 border border-cyan-300/20 text-cyan-200 text-sm mb-6">
+        <span
+          class="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-cyan-400/10 border border-cyan-300/20 text-cyan-200 text-sm font-medium mb-8 backdrop-blur-md shadow-lg"
+        >
           🌎 Um mundo congelado de beleza e aventura
         </span>
 
-        <h2 class="text-5xl md:text-7xl font-extrabold leading-tight mb-6">
+        <h2
+          class="text-5xl md:text-7xl font-black leading-tight mb-6 drop-shadow-2xl"
+        >
           Descubra a magia das
-          <span class="bg-gradient-to-r from-cyan-300 via-blue-400 to-purple-400 bg-clip-text text-transparent">
+          <span
+            class="bg-gradient-to-r from-cyan-300 via-blue-400 to-purple-400 bg-clip-text text-transparent"
+          >
             geleiras
           </span>
         </h2>
 
-        <p class="text-lg md:text-xl text-slate-300 leading-relaxed mb-10 max-w-2xl">
-          GlaciarLand é uma experiência visual imersiva inspirada nas paisagens
-          geladas mais impressionantes do planeta. Explore um universo de
-          montanhas cristalinas, auroras e oceanos congelados.
+        <p
+          class="text-lg md:text-xl text-slate-200 leading-relaxed mb-10 max-w-2xl"
+        >
+          GlaciarLand é uma experiência visual inspirada nas paisagens geladas
+          mais impressionantes do planeta. Explore montanhas cristalinas,
+          auroras boreais e oceanos congelados em um universo de cores vibrantes.
         </p>
 
         <div class="flex flex-wrap gap-4">
-          <button class="px-8 py-4 rounded-2xl bg-gradient-to-r from-cyan-400 to-blue-500 text-slate-950 font-bold shadow-xl shadow-cyan-500/30 hover:scale-105 transition">
-            Começar Jornada
+          <button
+            class="px-8 py-4 rounded-2xl bg-gradient-to-r from-cyan-300 via-blue-500 to-purple-500 text-slate-950 font-black shadow-2xl shadow-cyan-400/40 hover:scale-105 hover:-translate-y-1 hover:shadow-cyan-300/70 transition duration-300"
+          >
+            🚀 Começar Jornada
           </button>
 
-          <button class="px-8 py-4 rounded-2xl border border-cyan-300/30 bg-white/5 backdrop-blur-md hover:bg-white/10 transition">
-            Saiba Mais
+          <button
+            class="px-8 py-4 rounded-2xl border border-cyan-300/30 bg-white/10 backdrop-blur-md font-semibold hover:bg-white/20 hover:border-cyan-300/60 transition duration-300"
+          >
+            📘 Saiba Mais
           </button>
+        </div>
+
+        <!-- Estatísticas -->
+        <div class="grid grid-cols-3 gap-6 mt-12 max-w-xl">
+          <div>
+            <h4 class="text-3xl font-black text-cyan-300">150+</h4>
+            <p class="text-sm text-slate-300">Paisagens</p>
+          </div>
+          <div>
+            <h4 class="text-3xl font-black text-blue-300">4K</h4>
+            <p class="text-sm text-slate-300">Imagens HD</p>
+          </div>
+          <div>
+            <h4 class="text-3xl font-black text-purple-300">∞</h4>
+            <p class="text-sm text-slate-300">Inspiração</p>
+          </div>
         </div>
       </div>
 
-      <!-- Card visual -->
+      <!-- Imagem em destaque -->
       <div class="relative">
-        <div class="absolute -inset-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 rounded-3xl blur-3xl opacity-30"></div>
+        <div
+          class="absolute -inset-8 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 rounded-[2.5rem] blur-3xl opacity-35"
+        ></div>
 
-        <div class="relative rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl p-8 shadow-2xl">
-          <div class="aspect-[4/3] rounded-2xl bg-gradient-to-br from-cyan-300/20 via-blue-500/20 to-purple-500/20 flex items-center justify-center">
-            <div class="text-center">
-              <div class="text-8xl mb-4">🧊</div>
-              <h3 class="text-3xl font-bold mb-2">GlaciarLand</h3>
-              <p class="text-slate-300">
-                Tecnologia, natureza e design em perfeita harmonia.
-              </p>
-            </div>
+        <div
+          class="relative rounded-[2.5rem] border border-white/10 bg-white/5 backdrop-blur-2xl p-4 shadow-2xl"
+        >
+          <img
+            src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1200&q=100"
+            alt="Paisagem glacial"
+            class="w-full h-[460px] object-cover rounded-3xl shadow-xl"
+          />
+
+          <div
+            class="absolute bottom-8 left-8 right-8 bg-slate-900/55 backdrop-blur-xl border border-white/10 rounded-2xl p-5"
+          >
+            <h3 class="text-2xl font-bold mb-2">🧊 GlaciarLand</h3>
+            <p class="text-slate-200 text-sm">
+              Tecnologia, natureza e design unidos em uma experiência visual
+              extraordinária.
+            </p>
           </div>
         </div>
       </div>
@@ -72,47 +153,85 @@
   </section>
 
   <!-- Recursos -->
-  <section id="sobre" class="py-24 px-6">
+  <section id="sobre" class="relative z-10 py-28 px-6">
     <div class="max-w-7xl mx-auto">
       <div class="text-center mb-16">
-        <h3 class="text-4xl font-bold mb-4">Um universo cristalino</h3>
-        <p class="text-slate-300 max-w-2xl mx-auto">
+        <h3 class="text-4xl md:text-5xl font-black mb-4">
+          Um universo cristalino
+        </h3>
+        <p class="text-slate-200 max-w-3xl mx-auto text-lg">
           Um projeto moderno construído com Angular e Tailwind CSS, inspirado na
           imponência e pureza das paisagens glaciais.
         </p>
       </div>
 
       <div class="grid md:grid-cols-3 gap-8">
-        <div class="p-8 rounded-3xl bg-white/5 border border-white/10 backdrop-blur-xl hover:scale-105 transition">
-          <div class="text-4xl mb-4">❄️</div>
-          <h4 class="text-2xl font-semibold mb-3">Paisagens Geladas</h4>
-          <p class="text-slate-300">
-            Cenários inspirados nas geleiras mais fascinantes do planeta.
+        <!-- Card 1 -->
+        <div
+          class="p-8 rounded-3xl bg-white/10 border border-white/10 backdrop-blur-2xl hover:scale-105 hover:-translate-y-2 transition duration-300 shadow-xl"
+        >
+          <div class="text-5xl mb-5">❄️</div>
+          <h4 class="text-2xl font-bold mb-3">Paisagens Geladas</h4>
+          <p class="text-slate-200">
+            Cenários inspirados nas geleiras mais fascinantes e impressionantes
+            do planeta.
           </p>
         </div>
 
-        <div class="p-8 rounded-3xl bg-white/5 border border-white/10 backdrop-blur-xl hover:scale-105 transition">
-          <div class="text-4xl mb-4">🌌</div>
-          <h4 class="text-2xl font-semibold mb-3">Auroras Boreais</h4>
-          <p class="text-slate-300">
-            Gradientes vibrantes e efeitos luminosos de alto impacto visual.
+        <!-- Card 2 -->
+        <div
+          class="p-8 rounded-3xl bg-white/10 border border-white/10 backdrop-blur-2xl hover:scale-105 hover:-translate-y-2 transition duration-300 shadow-xl"
+        >
+          <div class="text-5xl mb-5">🌌</div>
+          <h4 class="text-2xl font-bold mb-3">Auroras Boreais</h4>
+          <p class="text-slate-200">
+            Gradientes vibrantes e efeitos luminosos inspirados no céu polar.
           </p>
         </div>
 
-        <div class="p-8 rounded-3xl bg-white/5 border border-white/10 backdrop-blur-xl hover:scale-105 transition">
-          <div class="text-4xl mb-4">🧭</div>
-          <h4 class="text-2xl font-semibold mb-3">Exploração</h4>
-          <p class="text-slate-300">
-            Interface intuitiva e moderna para uma experiência envolvente.
+        <!-- Card 3 -->
+        <div
+          class="p-8 rounded-3xl bg-white/10 border border-white/10 backdrop-blur-2xl hover:scale-105 hover:-translate-y-2 transition duration-300 shadow-xl"
+        >
+          <div class="text-5xl mb-5">🧭</div>
+          <h4 class="text-2xl font-bold mb-3">Exploração</h4>
+          <p class="text-slate-200">
+            Interface intuitiva e moderna para uma experiência imersiva.
           </p>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- Explorar -->
+  <section id="explorar" class="relative z-10 py-24 px-6">
+    <div
+      class="max-w-5xl mx-auto text-center rounded-[2.5rem] bg-white/10 border border-white/10 backdrop-blur-2xl p-12 shadow-2xl"
+    >
+      <h3 class="text-4xl md:text-5xl font-black mb-6">
+        Prepare-se para explorar o mundo congelado
+      </h3>
+      <p class="text-slate-200 text-lg mb-8 max-w-3xl mx-auto">
+        Descubra paisagens extraordinárias, cores vibrantes e a grandiosidade
+        das geleiras em uma jornada inesquecível.
+      </p>
+
+      <button
+        class="px-10 py-5 rounded-2xl bg-gradient-to-r from-cyan-300 via-blue-500 to-purple-500 text-slate-950 font-black text-lg shadow-2xl shadow-cyan-400/40 hover:scale-105 hover:-translate-y-1 transition duration-300"
+      >
+        ✨ Iniciar Exploração
+      </button>
+    </div>
+  </section>
+
   <!-- Footer -->
-  <footer id="contato" class="border-t border-white/10 py-8 px-6 text-center text-slate-400">
-    <p>© 2026 GlaciarLand — Explorando a beleza congelada do planeta.</p>
+  <footer
+    id="contato"
+    class="relative z-10 border-t border-white/10 py-10 px-6 text-center text-slate-300 bg-slate-950/30 backdrop-blur-xl"
+  >
+    <p class="font-medium">
+      © 2026 GlaciarLand — Explorando a beleza congelada do planeta.
+    </p>
   </footer>
 </div>
 
