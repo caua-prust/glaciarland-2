@@ -1,238 +1,257 @@
-<div
-  class="min-h-screen text-white bg-cover bg-center bg-fixed relative overflow-hidden"
-  style="
-    background-image:
-      linear-gradient(rgba(2, 6, 23, 0.82), rgba(3, 7, 18, 0.92)),
-      url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=2000&q=100');
-  "
->
-  <!-- Efeitos decorativos no fundo -->
-  <div class="absolute inset-0 pointer-events-none">
-    <div
-      class="absolute top-0 left-0 w-[600px] h-[600px] bg-cyan-400/20 rounded-full blur-3xl"
-    ></div>
-    <div
-      class="absolute bottom-0 right-0 w-[700px] h-[700px] bg-purple-500/20 rounded-full blur-3xl"
-    ></div>
-    <div
-      class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-blue-500/10 rounded-full blur-3xl"
-    ></div>
-  </div>
+<div class="site">
 
-  <!-- Header -->
-  <header
-    class="fixed top-0 left-0 w-full z-50 backdrop-blur-2xl bg-slate-950/65 border-b border-cyan-300/10 shadow-2xl shadow-cyan-900/20"
-  >
-    <nav
-      class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between"
-    >
-      <!-- Logo -->
-      <h1
-        class="text-3xl md:text-4xl font-black tracking-tight bg-gradient-to-r from-cyan-300 via-sky-400 to-purple-400 bg-clip-text text-transparent drop-shadow-lg"
-      >
-        ❄️ GlaciarLand
-      </h1>
+  <!-- CABEÇALHO -->
+  <header class="header">
+    <div class="container nav">
 
-      <!-- Menu -->
-      <div
-        class="hidden md:flex items-center gap-8 text-sm font-semibold text-cyan-100/90"
-      >
-        <a href="#inicio" class="hover:text-cyan-300 transition duration-300"
-          >Início</a
-        >
-        <a href="#sobre" class="hover:text-cyan-300 transition duration-300"
-          >Sobre</a
-        >
-        <a href="#explorar" class="hover:text-cyan-300 transition duration-300"
-          >Explorar</a
-        >
-        <a href="#contato" class="hover:text-cyan-300 transition duration-300"
-          >Contato</a
-        >
-      </div>
+      <a href="#inicio" class="logo">
+        🌎 Notícias de GlaciarLand
+      </a>
 
-      <!-- Botão -->
-      <button
-        class="px-6 py-3 rounded-full bg-gradient-to-r from-cyan-300 via-blue-500 to-purple-500 text-slate-950 font-extrabold shadow-2xl shadow-cyan-400/40 hover:scale-110 hover:-translate-y-1 hover:shadow-cyan-300/70 transition duration-300"
-      >
-        Explorar Agora
-      </button>
-    </nav>
+      <nav class="menu">
+        <a href="#inicio">Início</a>
+        <a href="#noticias">Notícias</a>
+        <a href="#categorias">Categorias</a>
+        <a href="#contato">Contato</a>
+      </nav>
+
+    </div>
   </header>
 
-  <!-- Hero -->
-  <section id="inicio" class="relative z-10 pt-40 pb-28 px-6">
-    <div
-      class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center"
-    >
-      <!-- Texto -->
-      <div>
-        <span
-          class="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-cyan-400/10 border border-cyan-300/20 text-cyan-200 text-sm font-medium mb-8 backdrop-blur-md shadow-lg"
-        >
-          🌎 Um mundo congelado de beleza e aventura
-        </span>
 
-        <h2
-          class="text-5xl md:text-7xl font-black leading-tight mb-6 drop-shadow-2xl"
-        >
-          Descubra a magia das
-          <span
-            class="bg-gradient-to-r from-cyan-300 via-blue-400 to-purple-400 bg-clip-text text-transparent"
-          >
-            geleiras
+  <!-- DESTAQUE -->
+  <main>
+
+    <section id="inicio" class="hero">
+
+      <div class="container hero-content">
+
+        <div class="hero-text">
+
+          <span class="tag">
+            ❄️ Portal oficial de notícias
           </span>
-        </h2>
 
-        <p
-          class="text-lg md:text-xl text-slate-200 leading-relaxed mb-10 max-w-2xl"
-        >
-          GlaciarLand é uma experiência visual inspirada nas paisagens geladas
-          mais impressionantes do planeta. Explore montanhas cristalinas,
-          auroras boreais e oceanos congelados em um universo de cores vibrantes.
-        </p>
+          <h1>
+            Notícias de
+            <span>GlaciarLand</span>
+          </h1>
 
-        <div class="flex flex-wrap gap-4">
-          <button
-            class="px-8 py-4 rounded-2xl bg-gradient-to-r from-cyan-300 via-blue-500 to-purple-500 text-slate-950 font-black shadow-2xl shadow-cyan-400/40 hover:scale-105 hover:-translate-y-1 hover:shadow-cyan-300/70 transition duration-300"
-          >
-            🚀 Começar Jornada
-          </button>
+          <p>
+            Acompanhe as principais notícias do país de GlaciarLand,
+            incluindo política, economia, meio ambiente, turismo,
+            tecnologia, cultura e esportes.
+          </p>
 
-          <button
-            class="px-8 py-4 rounded-2xl border border-cyan-300/30 bg-white/10 backdrop-blur-md font-semibold hover:bg-white/20 hover:border-cyan-300/60 transition duration-300"
-          >
-            📘 Saiba Mais
-          </button>
+          <div class="hero-buttons">
+            <a href="#noticias" class="btn primary">
+              📰 Ver notícias
+            </a>
+
+            <a href="#categorias" class="btn secondary">
+              Explorar categorias
+            </a>
+          </div>
+
         </div>
 
-        <!-- Estatísticas -->
-        <div class="grid grid-cols-3 gap-6 mt-12 max-w-xl">
-          <div>
-            <h4 class="text-3xl font-black text-cyan-300">150+</h4>
-            <p class="text-sm text-slate-300">Paisagens</p>
-          </div>
-          <div>
-            <h4 class="text-3xl font-black text-blue-300">4K</h4>
-            <p class="text-sm text-slate-300">Imagens HD</p>
-          </div>
-          <div>
-            <h4 class="text-3xl font-black text-purple-300">∞</h4>
-            <p class="text-sm text-slate-300">Inspiração</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Imagem em destaque -->
-      <div class="relative">
-        <div
-          class="absolute -inset-8 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 rounded-[2.5rem] blur-3xl opacity-35"
-        ></div>
-
-        <div
-          class="relative rounded-[2.5rem] border border-white/10 bg-white/5 backdrop-blur-2xl p-4 shadow-2xl"
-        >
+        <div class="hero-image">
           <img
-            src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1200&q=100"
-            alt="Paisagem glacial"
-            class="w-full h-[460px] object-cover rounded-3xl shadow-xl"
-          />
-
-          <div
-            class="absolute bottom-8 left-8 right-8 bg-slate-900/55 backdrop-blur-xl border border-white/10 rounded-2xl p-5"
+            src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1000&q=80"
+            alt="Montanhas de GlaciarLand"
           >
-            <h3 class="text-2xl font-bold mb-2">🧊 GlaciarLand</h3>
-            <p class="text-slate-200 text-sm">
-              Tecnologia, natureza e design unidos em uma experiência visual
-              extraordinária.
-            </p>
-          </div>
         </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- Recursos -->
-  <section id="sobre" class="relative z-10 py-28 px-6">
-    <div class="max-w-7xl mx-auto">
-      <div class="text-center mb-16">
-        <h3 class="text-4xl md:text-5xl font-black mb-4">
-          Um universo cristalino
-        </h3>
-        <p class="text-slate-200 max-w-3xl mx-auto text-lg">
-          Um projeto moderno construído com Angular e Tailwind CSS, inspirado na
-          imponência e pureza das paisagens glaciais.
+      </div>
+
+    </section>
+
+
+    <!-- CATEGORIAS -->
+    <section id="categorias" class="categories section">
+
+      <div class="container">
+
+        <div class="section-title">
+          <span>Explore</span>
+          <h2>Categorias</h2>
+          <p>
+            Encontre notícias de diferentes áreas de GlaciarLand.
+          </p>
+        </div>
+
+        <div class="category-grid">
+
+          <div class="category-card">
+            <div class="category-icon">🏛️</div>
+            <h3>Política</h3>
+            <p>Decisões e acontecimentos do governo.</p>
+          </div>
+
+          <div class="category-card">
+            <div class="category-icon">💰</div>
+            <h3>Economia</h3>
+            <p>Mercado, empregos e desenvolvimento.</p>
+          </div>
+
+          <div class="category-card">
+            <div class="category-icon">🌡️</div>
+            <h3>Meio Ambiente</h3>
+            <p>Mudanças climáticas e preservação.</p>
+          </div>
+
+          <div class="category-card">
+            <div class="category-icon">🏔️</div>
+            <h3>Turismo</h3>
+            <p>Montanhas, geleiras e atrações turísticas.</p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- NOTÍCIAS -->
+   <section id="noticias" class="news section">
+
+  <div class="container">
+
+    <div class="section-title">
+      <span>Últimas informações</span>
+      <h2>Principais Notícias</h2>
+      <p>
+        Confira os acontecimentos mais importantes de GlaciarLand.
+      </p>
+    </div>
+
+    <div class="news-grid">
+
+      <article
+        class="news-card"
+        *ngFor="let noticia of noticias; let i = index"
+      >
+
+        <div class="news-image">
+
+          <img
+            *ngIf="i === 0"
+            src="https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=900&q=80"
+            alt="Notícia de GlaciarLand"
+          >
+
+          <img
+            *ngIf="i === 1"
+            src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=900&q=80"
+            alt="Notícia de GlaciarLand"
+          >
+
+          <img
+            *ngIf="i === 2"
+            src="https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?auto=format&fit=crop&w=900&q=80"
+            alt="Notícia de GlaciarLand"
+          >
+
+          <img
+            *ngIf="i >= 3"
+            src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=900&q=80"
+            alt="Notícia de GlaciarLand"
+          >
+
+        </div>
+
+        <div class="news-content">
+
+          <span class="news-category">
+            GlaciarLand
+          </span>
+
+          <h3>
+            {{ noticia.titulo }}
+          </h3>
+
+          <p>
+            📍 {{ noticia.local }}
+          </p>
+
+          <p>
+            📅 {{ noticia.data | date:'dd/MM/yyyy' }}
+          </p>
+
+          <a href="#">
+            Ler notícia →
+          </a>
+
+        </div>
+
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+    <!-- SOBRE -->
+    <section class="about section">
+
+      <div class="container about-box">
+
+        <div>
+
+          <span>Sobre o portal</span>
+
+          <h2>
+            Informação para todos os habitantes de GlaciarLand
+          </h2>
+
+          <p>
+            O Notícias de GlaciarLand é um portal fictício criado para
+            apresentar informações sobre o país, seus acontecimentos,
+            desafios ambientais, economia e turismo.
+          </p>
+
+          <p>
+            O projeto utiliza Angular no desenvolvimento da aplicação
+            e JSON Server para armazenar e disponibilizar as notícias.
+          </p>
+
+        </div>
+
+        <div class="about-number">
+          <strong>24h</strong>
+          <span>Informação</span>
+          <span>atualizada</span>
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- RODAPÉ -->
+  <footer id="contato" class="footer">
+
+    <div class="container footer-content">
+
+      <div>
+        <h3>🌎 Notícias de GlaciarLand</h3>
+        <p>
+          Informação, cultura e notícias do país.
         </p>
       </div>
 
-      <div class="grid md:grid-cols-3 gap-8">
-        <!-- Card 1 -->
-        <div
-          class="p-8 rounded-3xl bg-white/10 border border-white/10 backdrop-blur-2xl hover:scale-105 hover:-translate-y-2 transition duration-300 shadow-xl"
-        >
-          <div class="text-5xl mb-5">❄️</div>
-          <h4 class="text-2xl font-bold mb-3">Paisagens Geladas</h4>
-          <p class="text-slate-200">
-            Cenários inspirados nas geleiras mais fascinantes e impressionantes
-            do planeta.
-          </p>
-        </div>
-
-        <!-- Card 2 -->
-        <div
-          class="p-8 rounded-3xl bg-white/10 border border-white/10 backdrop-blur-2xl hover:scale-105 hover:-translate-y-2 transition duration-300 shadow-xl"
-        >
-          <div class="text-5xl mb-5">🌌</div>
-          <h4 class="text-2xl font-bold mb-3">Auroras Boreais</h4>
-          <p class="text-slate-200">
-            Gradientes vibrantes e efeitos luminosos inspirados no céu polar.
-          </p>
-        </div>
-
-        <!-- Card 3 -->
-        <div
-          class="p-8 rounded-3xl bg-white/10 border border-white/10 backdrop-blur-2xl hover:scale-105 hover:-translate-y-2 transition duration-300 shadow-xl"
-        >
-          <div class="text-5xl mb-5">🧭</div>
-          <h4 class="text-2xl font-bold mb-3">Exploração</h4>
-          <p class="text-slate-200">
-            Interface intuitiva e moderna para uma experiência imersiva.
-          </p>
-        </div>
+      <div>
+        <p>© 2026 GlaciarLand</p>
+        <p>Projeto acadêmico desenvolvido em Angular.</p>
       </div>
+
     </div>
-  </section>
 
-  <!-- Explorar -->
-  <section id="explorar" class="relative z-10 py-24 px-6">
-    <div
-      class="max-w-5xl mx-auto text-center rounded-[2.5rem] bg-white/10 border border-white/10 backdrop-blur-2xl p-12 shadow-2xl"
-    >
-      <h3 class="text-4xl md:text-5xl font-black mb-6">
-        Prepare-se para explorar o mundo congelado
-      </h3>
-      <p class="text-slate-200 text-lg mb-8 max-w-3xl mx-auto">
-        Descubra paisagens extraordinárias, cores vibrantes e a grandiosidade
-        das geleiras em uma jornada inesquecível.
-      </p>
-
-      <button
-        class="px-10 py-5 rounded-2xl bg-gradient-to-r from-cyan-300 via-blue-500 to-purple-500 text-slate-950 font-black text-lg shadow-2xl shadow-cyan-400/40 hover:scale-105 hover:-translate-y-1 transition duration-300"
-      >
-        ✨ Iniciar Exploração
-      </button>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer
-    id="contato"
-    class="relative z-10 border-t border-white/10 py-10 px-6 text-center text-slate-300 bg-slate-950/30 backdrop-blur-xl"
-  >
-    <p class="font-medium">
-      © 2026 GlaciarLand — Explorando a beleza congelada do planeta.
-    </p>
   </footer>
-</div>
 
-<router-outlet></router-outlet>
+</div>
