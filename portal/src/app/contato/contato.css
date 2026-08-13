@@ -1,0 +1,69 @@
+.pagina {
+  padding: 70px 20px;
+}
+
+.pagina h1 {
+  text-align: center;
+  color: #67e8f9;
+  font-size: 40px;
+}
+
+.pagina > .container > p {
+  text-align: center;
+  color: #cbd5e1;
+  margin-bottom: 40px;
+}
+
+.contato {
+  max-width: 900px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  background: #10243a;
+  padding: 35px;
+  border-radius: 20px;
+}
+
+.contato h2 {
+  color: #67e8f9;
+}
+
+.contato p {
+  color: #cbd5e1;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+input,
+textarea {
+  padding: 14px;
+  border: 1px solid #315d7c;
+  border-radius: 8px;
+  background: #07111f;
+  color: white;
+}
+
+button {
+  padding: 14px;
+  border: none;
+  border-radius: 8px;
+  background: #0ea5e9;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #0284c7;
+}
+
+@media (max-width: 700px) {
+  .contato {
+    grid-template-columns: 1fr;
+  }
+}

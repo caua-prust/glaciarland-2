@@ -1,257 +1,28 @@
 <div class="site">
 
-  <!-- CABEÇALHO -->
   <header class="header">
     <div class="container nav">
 
-      <a href="#inicio" class="logo">
-        🌎 Notícias de GlaciarLand
+      <a routerLink="/inicio" class="logo">
+        ❄ GlaciarLand
       </a>
 
       <nav class="menu">
-        <a href="#inicio">Início</a>
-        <a href="#noticias">Notícias</a>
-        <a href="#categorias">Categorias</a>
-        <a href="#contato">Contato</a>
+        <a routerLink="/inicio">Início</a>
+        <a routerLink="/noticias">Notícias</a>
+        <a routerLink="/categorias">Categorias</a>
+        <a routerLink="/contato">Contato</a>
       </nav>
 
     </div>
   </header>
 
-
-  <!-- DESTAQUE -->
-  <main>
-
-    <section id="inicio" class="hero">
-
-      <div class="container hero-content">
-
-        <div class="hero-text">
-
-          <span class="tag">
-            ❄️ Portal oficial de notícias
-          </span>
-
-          <h1>
-            Notícias de
-            <span>GlaciarLand</span>
-          </h1>
-
-          <p>
-            Acompanhe as principais notícias do país de GlaciarLand,
-            incluindo política, economia, meio ambiente, turismo,
-            tecnologia, cultura e esportes.
-          </p>
-
-          <div class="hero-buttons">
-            <a href="#noticias" class="btn primary">
-              📰 Ver notícias
-            </a>
-
-            <a href="#categorias" class="btn secondary">
-              Explorar categorias
-            </a>
-          </div>
-
-        </div>
-
-        <div class="hero-image">
-          <img
-            src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1000&q=80"
-            alt="Montanhas de GlaciarLand"
-          >
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- CATEGORIAS -->
-    <section id="categorias" class="categories section">
-
-      <div class="container">
-
-        <div class="section-title">
-          <span>Explore</span>
-          <h2>Categorias</h2>
-          <p>
-            Encontre notícias de diferentes áreas de GlaciarLand.
-          </p>
-        </div>
-
-        <div class="category-grid">
-
-          <div class="category-card">
-            <div class="category-icon">🏛️</div>
-            <h3>Política</h3>
-            <p>Decisões e acontecimentos do governo.</p>
-          </div>
-
-          <div class="category-card">
-            <div class="category-icon">💰</div>
-            <h3>Economia</h3>
-            <p>Mercado, empregos e desenvolvimento.</p>
-          </div>
-
-          <div class="category-card">
-            <div class="category-icon">🌡️</div>
-            <h3>Meio Ambiente</h3>
-            <p>Mudanças climáticas e preservação.</p>
-          </div>
-
-          <div class="category-card">
-            <div class="category-icon">🏔️</div>
-            <h3>Turismo</h3>
-            <p>Montanhas, geleiras e atrações turísticas.</p>
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- NOTÍCIAS -->
-   <section id="noticias" class="news section">
-
-  <div class="container">
-
-    <div class="section-title">
-      <span>Últimas informações</span>
-      <h2>Principais Notícias</h2>
-      <p>
-        Confira os acontecimentos mais importantes de GlaciarLand.
-      </p>
-    </div>
-
-    <div class="news-grid">
-
-      <article
-        class="news-card"
-        *ngFor="let noticia of noticias; let i = index"
-      >
-
-        <div class="news-image">
-
-          <img
-            *ngIf="i === 0"
-            src="https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=900&q=80"
-            alt="Notícia de GlaciarLand"
-          >
-
-          <img
-            *ngIf="i === 1"
-            src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=900&q=80"
-            alt="Notícia de GlaciarLand"
-          >
-
-          <img
-            *ngIf="i === 2"
-            src="https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?auto=format&fit=crop&w=900&q=80"
-            alt="Notícia de GlaciarLand"
-          >
-
-          <img
-            *ngIf="i >= 3"
-            src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=900&q=80"
-            alt="Notícia de GlaciarLand"
-          >
-
-        </div>
-
-        <div class="news-content">
-
-          <span class="news-category">
-            GlaciarLand
-          </span>
-
-          <h3>
-            {{ noticia.titulo }}
-          </h3>
-
-          <p>
-            📍 {{ noticia.local }}
-          </p>
-
-          <p>
-            📅 {{ noticia.data | date:'dd/MM/yyyy' }}
-          </p>
-
-          <a href="#">
-            Ler notícia →
-          </a>
-
-        </div>
-
-      </article>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-    <!-- SOBRE -->
-    <section class="about section">
-
-      <div class="container about-box">
-
-        <div>
-
-          <span>Sobre o portal</span>
-
-          <h2>
-            Informação para todos os habitantes de GlaciarLand
-          </h2>
-
-          <p>
-            O Notícias de GlaciarLand é um portal fictício criado para
-            apresentar informações sobre o país, seus acontecimentos,
-            desafios ambientais, economia e turismo.
-          </p>
-
-          <p>
-            O projeto utiliza Angular no desenvolvimento da aplicação
-            e JSON Server para armazenar e disponibilizar as notícias.
-          </p>
-
-        </div>
-
-        <div class="about-number">
-          <strong>24h</strong>
-          <span>Informação</span>
-          <span>atualizada</span>
-        </div>
-
-      </div>
-
-    </section>
-
+  <main class="main">
+    <router-outlet></router-outlet>
   </main>
 
-
-  <!-- RODAPÉ -->
-  <footer id="contato" class="footer">
-
-    <div class="container footer-content">
-
-      <div>
-        <h3>🌎 Notícias de GlaciarLand</h3>
-        <p>
-          Informação, cultura e notícias do país.
-        </p>
-      </div>
-
-      <div>
-        <p>© 2026 GlaciarLand</p>
-        <p>Projeto acadêmico desenvolvido em Angular.</p>
-      </div>
-
-    </div>
-
+  <footer class="footer">
+    <p>© 2026 GlaciarLand — Portal de Notícias</p>
   </footer>
 
 </div>
